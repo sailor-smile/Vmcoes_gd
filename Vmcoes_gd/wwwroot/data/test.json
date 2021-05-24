@@ -1,0 +1,51 @@
+﻿{
+  "pageTotal": 20,
+  "pageSize": 10,
+  "pageNo": 1,
+
+  "datas": [
+    //{"gcn": "gongceng1"},
+    {
+      "gcCode": "工程1",
+      "list": [
+        {
+
+          "gcn": "gongceng1",
+          "carNo": "F001"
+        },
+        {
+          "gcn": "gongceng1",
+          "carNo": "F002"
+        },
+        {
+          "gcn": "gongceng1",
+          "carNo": "F003"
+        },
+        {
+          "gcn": "gongceng1",
+          "carNo": "F004"
+        },
+        {
+          "gcn": "gongceng1",
+          "carNo": "F005"
+        }
+      ]
+
+    },
+    {
+      "gcCode": "工程2",
+      "list": [
+        {
+
+          "gcn": "gongceng1",
+          "carNo": "F001"
+        }
+      ]
+
+    }
+
+  ]
+
+
+
+}

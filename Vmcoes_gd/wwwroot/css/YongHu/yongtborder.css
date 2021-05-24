@@ -1,0 +1,49 @@
+﻿#biaotou > thead > tr > th, #biaotou > tbody > tr > th, #biaotou > tfoot > tr > th, #biaotou > thead > tr > td, #biaotou > tbody > tr > td, #biaotou > tfoot > tr > td,
+{
+    border-top: 2px solid #444 !important;
+   
+}
+
+#biaotou > thead > tr > th, #biaotou > tbody > tr > th, #biaotou > tfoot > tr > th, #biaotou > thead > tr > td, #biaotou > tbody > tr > td, #biaotou > tfoot > tr > td,
+#dayindataList > thead > tr > th, #dayindataList > tbody > tr > th, #dayindataList > tfoot > tr > th, #dayindataList > thead > tr > td, #dayindataList > tbody > tr > td, #dayindataList > tfoot > tr > td {
+    border: 1px solid #444 !important;
+    padding: 2px;
+    height: 40px;
+    font-family: "微软雅黑"；
+}
+
+#dayindataList tbody {
+    border-top: hidden;
+}
+
+#dayindataList {
+    margin-bottom:20px;
+
+}
+
+/*@media print{
+     .pageBreak
+     {
+         page-break-after: always;
+        
+    }
+
+     .noPrint
+     {
+         display: none;
+        
+    }*/
+
+    /*.fenye {
+        border: none
+    }*/
+
+    
+/*}*/
+
+#nianxin {
+    z-index: 999;
+    position: sticky;
+    top: 0px;
+    background-color: #FFFFFF;
+}

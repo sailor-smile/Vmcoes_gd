@@ -1,0 +1,154 @@
+﻿
+<style>
+    #nianxin {
+        position: sticky;
+        top: 0px;
+        background-color: #FFFFFF;
+        z-index: 999;
+    }
+
+</style>
+
+<div class="page-content">
+    <div id="nianxin">@*粘性定位*@
+        <div class="page-header col-xs-12" style="line-height:30px;">
+            <h1 style="display:inline-block;" class="col-xs-7">
+                普陀区出土工地视频监控检查表信息
+            </h1>
+            <div class="pull-right">
+                <a href="/Home/Create" class="btn btn-info btn-sm">新增</a>
+            </div>
+        </div><!-- /.page-header -->
+        <div class="col-xs-12 page-header-top">
+            <div id="page_alert_container"></div>
+        </div>
+        <form class="form-horizontal" id="form_query">
+            <div class="row">
+                <div class="col-sm-4 col-xs-4">
+                    <div class="form-group">
+                        <input id="rqrqrq" type="hidden" value="@(ViewData["defDate"])" />
+                        <label class="col-xs-3 control-label no-width" for="q-dept">日期:</label>
+                        <div class="col-sm-8 col-xs-8">
+                            <input type="text" id="stDate1" class="form-control" value="" onclick="WdatePicker({dateFmt:'yyyy-MM-dd'})">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-1 col-xs-1">
+                    <div class="form-group">
+                        <div class="controls">
+                            <button id="sousuo" type="button" class="btn btn-sm btn-primary">搜索</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-1 col-xs-1" style="float:right">
+                    <div class="form-group">
+                        <div class="controls">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="hr hr-18 dotted"></div>
+    </div>
+  
+    <div class="row">
+        <div class="col-xs-12">
+            <table id="dataList" class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>日期</th>
+                        <th>时间</th>
+                        <th>工地名称</th>
+                        <th>工地地址</th>
+                        <th>运输车辆</th>
+                        <th>是否冲洗</th>
+                        <th>是否密闭</th>
+                        <th>是否办理有效处置证</th>
+                        <th>运输公司名称</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <div class="row">
+                <div class="col-xs-6" id="pageTotalRecord"></div>
+                <div class="col-xs-6">
+                    <div class="pagination dataTables_paginate paging_bootstrap" id="paginationContainer"></div>
+                </div>
+            </div>
+            <!-- PAGE CONTENT ENDS -->
+        </div><!-- /.col -->
+    </div><!-- /.row -->
+</div><!-- /.page-content -->
+
+
+
+<script id="listTpl" type="text/x-jquery-tmpl">
+    <tr>
+        <td>${date}</td>
+        <td>${time}</td>
+        <td>${constName}</td>
+        <td>${constAddr}</td>
+        <td>${trans}</td>
+        <td>
+            {{if rinse==0}}
+            是
+            {{else}}
+            否
+            {{/if}}
+        </td>
+        <td>
+            {{if airtight==0}}
+            是
+            {{else}}
+            否
+            {{/if}}
+        </td>
+        <td>
+            {{if certificate==0}}
+            是
+            {{else certificate==1}}
+            否
+            {{/if}}
+        </td>
+        <td>${transportcompanyName}</td>
+        <td width="15%">
+            <div class="hidden-sm hidden-xs btn-group">
+                <a href="#" class="btn btn-xs btn-info opt-edit" ref="${id}">
+                    <i class="ace-icon fa fa-pencil bigger-120"></i>
+                    修改
+                </a>
+                <a class="btn btn-xs btn-danger opt-del" ref="${id}">
+                    <i class="ace-icon fa fa-trash-o bigger-120"></i>
+                    删除
+                </a>
+            </div>
+        </td>
+    </tr>
+</script>
+
+<link rel="stylesheet" href="~/js/plugins/timepicker/bootstrap-timepicker.min.css" />
+<script src="~/js/plugins/moment/moment-with-locales.js"></script>
+<script src="~/js/plugins/My97DatePicker/WdatePicker.js"></script>
+<script src="~/js/plugins/timepicker/bootstrap-timepicker.min.js"></script>
+<script src="~/js/pageScripts/Nurse/StandardVal/index.js"></script>
+
+<script>
+    //$('#stDate3').timepicker({
+    //    defaultTime: '9:00',
+    //    showInputs: true,
+    //    minuteStep: 1,
+    //    showMeridian: false,
+    //    maxHours: 24,
+    //});
+         //当前时间
+        //$(function () {
+        //    var myDate = new Date;
+        //    var year = myDate.getFullYear(); //获取当前年
+        //    var mon = myDate.getMonth() + 1; //获取当前月
+        //    var date = myDate.getDate(); //获取当前日
+        //    var timeing = year + "-" + mon + "-" + date
+        //    $("#stDate1").attr("value", timeing);
+        //});
+
+</script>
